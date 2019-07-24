@@ -1,0 +1,49 @@
+bind "set completion-ignore-case on"
+
+
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+export GREP_OPTIONS='--color=auto'
+
+
+function prompt {
+	local WHITE="\[\033[1;37m\]"
+	local GREEN="\[\033[0;32m\]"
+	local CYAN="\[\033[0;36m\]"
+	local LBLUE="\[\033[1;34m\]"
+	local CLEAR="\[\033[0m\]"
+	local RED="\[\033[0;31m\]"
+
+	PS1="${GREEN}\u${CYAN}${CYAN}\w${RED} ¯\\_(ツ)_/¯ ${CLEAR}: "
+
+}
+
+prompt
+
+
+
+
+
+
+
+
+
+
+
+
+#Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+export PATH="$PATH:/Users/r/fluttersdk/flutter/bin"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/randyhartzell/.sdkman"
+[[ -s "/Users/r/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/r/.sdkman/bin/sdkman-init.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/r/google-cloud-sdk/path.bash.inc' ]; then . '/Users/r/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/r/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/r/google-cloud-sdk/completion.bash.inc'; fi
